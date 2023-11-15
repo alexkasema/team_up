@@ -1,7 +1,20 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
+# from django.contrib.auth.models import User #! we are removing this to create he custom user model
 
 # Create your models here.
+
+#! After creating this go to settings.py and add AUTH_USER_MODEL
+class User(AbstractUser):
+    name = models.CharField(max_length=200, null=True)
+    email = models.EmailField(unique=True, null=True)
+    bio = models.TextField(null=True)
+
+    #avatar
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+
 
 #! room is a child of a topic
 class Topic(models.Model):

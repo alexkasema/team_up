@@ -1,6 +1,6 @@
 from django.forms import ModelForm
-from django.contrib.auth.models import User
-from .models import Room
+#from django.contrib.auth.models import User #! remove this because we created a custom user model
+from .models import Room, User
 
 class RoomForm(ModelForm):
     class Meta:
