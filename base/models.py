@@ -10,7 +10,8 @@ class User(AbstractUser):
     email = models.EmailField(unique=True, null=True)
     bio = models.TextField(null=True)
 
-    #avatar
+    #! we need to install pillow for this to work
+    avatar = models.ImageField(null=True, default="avatar.svg")
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
