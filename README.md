@@ -58,7 +58,7 @@ To run the App, we use :
 
 ![App Image](/app_images/index1.png)
 
-![App Image](/app_images/profile.png)
+![App Image](/app_images/profile1.png)
 
 ![App Image](/app_images/create1.png)
 
